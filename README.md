@@ -11,6 +11,8 @@ Suggested steps to get started:
 
 Extensions
 ----------------------------------------------
+**Add sounds**. Create a `sounds` folder like the one in the previous assingment. Play appropriate sounds for each action in the game.   
+
 **Change the gardener**. In the image folder is an alternate picture of a pig with a watering can. You can use that or make a new character using any 8-bit online editor.   
 
 **Add more flowers**. You can change how often a new flower appears on the screen to make the game easier or harder. Update the code under `def add_flowers():` to change how often it schedules a call to itself.   
