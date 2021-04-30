@@ -9,17 +9,17 @@ Suggested steps to get started:
 
 Extensions
 ----------------------------------------------
-**Change the gardener**. In the image folder is an alternate picture of a pig. You can use that or make a new character using any 8-bit online editor.   
+**Change the gardener**. In the image folder is an alternate picture of a pig with a watering can. You can use that or make a new character using any 8-bit online editor.   
 
 **Add more flowers**. You can change how often a new flower appears on the screen to make the game easier or harder. Update the code under `def add_flowers():` to change how often it schedules a call to itself.   
 
-**Faster fanflowers**. You can make the fangflowers move faster by changing the possible rande of `random_velocity`. Try increasing the range by using something like `randint(4,6)`.   
+**Faster fangflowers**. You can make the fangflowers move faster by changing the possible rande of `random_velocity`. Try increasing the range by using something like `randint(4,6)`.   
 
 **Add more fangflowers**. Is the game to hard or too easy? You can change the code in `mutate()` to make fangflowers appear more or less often.   
 
 **Add new enemies**. If you find the game is not challenging enough at the moment, you can add more enemies. 
 
-**Rain in the garden**. What happens if it rands in the garden? The flowers will be much happier and wouldn't need watering. But they will also mutate into fanglowers more quickly. To make it look like it's raning, you can update the background with `garden-raining.png` in the images folder.
+**Rain in the garden**. What happens if it rands in the garden? The flowers will be much happier and wouldn't need watering. But they will also mutate into fanglowers more quickly. To make it look like it's raining, you can update the background with `garden-raining.png` in the images folder.
 
 Samples of Student work
 -----------------------
