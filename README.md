@@ -20,7 +20,7 @@ Extensions
 
 **Add new enemies**. If you find the game is not challenging enough at the moment, you can add more enemies. 
 
-**Rain in the garden**. What happens if it rands in the garden? The flowers will be much happier and wouldn't need watering. But they will also mutate into fanglowers more quickly. To make it look like it's raining, you can update the background with `garden-raining.png` in the images folder.
+**Rain in the garden**. What happens if it rains in the garden? The flowers will be much happier and wouldn't need watering. But they will also mutate into fanglowers more quickly. To make it look like it's raining, you can update the background with `garden-raining.png` in the images folder.
 
 Samples of Student work
 -----------------------
