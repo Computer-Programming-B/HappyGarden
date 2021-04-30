@@ -5,7 +5,7 @@ When this game starts, a cow with a watering can appears in the garden, but ther
 Suggested steps to get started:
 ---------------------------------
 1. Start by forking [this replit](https://replit.com/@MrSimonLowell/HappyGardenBase)
-2. * More to come *
+2. *More to come*
 
 Extensions
 ----------------------------------------------
@@ -18,4 +18,9 @@ Extensions
 
 Samples of Student work
 -----------------------
-*none yet!*
+*none yet!*   
+   
+      
+      
+      
+      <center>*This project is based on the book* **Coding Games in Python**</center>
