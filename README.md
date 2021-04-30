@@ -23,4 +23,4 @@ Samples of Student work
       
       
       
-<p align="center"><i>This project is based on the book <b>Coding Games in Python</b></i></p>
+<p align="center"><i>This project is based on the book <b><a href="https://www.amazon.com/Coding-Games-Python-DK/dp/1465473610">Coding Games in Python</a></b></i></p>
