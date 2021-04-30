@@ -23,4 +23,4 @@ Samples of Student work
       
       
       
-      <center>*This project is based on the book* **Coding Games in Python**</center>
+<p align="center">*This project is based on the book* **Coding Games in Python**</p>
