@@ -17,7 +17,7 @@ Extensions
 
 **Add more flowers**. You can change how often a new flower appears on the screen to make the game easier or harder. Update the code under `def add_flowers():` to change how often it schedules a call to itself.   
 
-**Faster fangflowers**. You can make the fangflowers move faster by changing the possible rande of `random_velocity`. Try increasing the range by using something like `randint(4,6)`.   
+**Faster fangflowers**. You can make the fangflowers move faster by changing the possible range of `random_velocity`. Try increasing the range by using something like `randint(4,6)`.   
 
 **Add more fangflowers**. Is the game to hard or too easy? You can change the code in `mutate()` to make fangflowers appear more or less often.   
 
