@@ -5,7 +5,7 @@ When this game starts, a cow with a watering can appears in the garden, but ther
 
 Suggested steps to get started:
 ---------------------------------
-1. Start by forking [this replit](https://replit.com/@MrSimonLowell/HappyGardenBase), or download and unzip the replit if you are working on your own PC.
+1. Start by forking [this replit](https://replit.com/@MrSimonLowell/HappyGardenBase), or download and unzip the replit if you are working on your own PC or Mac.
 2. This is the largest and most complicated project of the semester. To help keep it manageable, we'll start with an outline that labels each variable and function that we need to complete to finish the program. After each step, run your program to check for errors. *Keep your program running!*. Don't go to the next step until you've fixed the errors on the current step.
 3. *More to come*
 
