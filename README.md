@@ -11,7 +11,7 @@ Suggested steps to get started:
 
 Extensions
 ----------------------------------------------
-**Add sounds**. Create a `sounds` folder like the one in the previous assingment. Play appropriate sounds for each action in the game.   
+**Add sounds**. Create a `sounds` folder like the one in the previous assingment. Play appropriate sounds for each action in the game. Unfortunately, replit doesn't support sounds in Pygame.  
 
 **Change the gardener**. In the image folder there is an alternate picture of a pig with a watering can. You can use that or make a new character using any 8-bit online editor.   
 
