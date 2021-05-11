@@ -27,7 +27,7 @@ This is the largest and most complicated project of the semester. To help keep i
         if (not game_over):
             screen.blit("garden",(0,0))
     ```
-    Run your code, you should see the garden.   
+    Run your program, you should see the garden.   
 
 2. Next, we'll add the cow. Under the comment `#actor variables` add the following code:
     ```python
@@ -42,7 +42,7 @@ This is the largest and most complicated project of the semester. To help keep i
             screen.blit("garden",(0,0))
             cow.draw()
     ```
-    Run your code, you should see the cow with the watering can in the bottom left hand corner of the garden.   
+    Run your program, you should see the cow with the watering can in the bottom left hand corner of the garden.   
 
 3. Now we'll make the cow move. In the `update()` function, replace the placeholder `pass` with:
     ```python
@@ -58,7 +58,7 @@ This is the largest and most complicated project of the semester. To help keep i
         if(keyboard.down and cow.y < WIDTH):
             cow.y += 5
     ```
-    Run your code and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
+    Run your program and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
 
 4. Next, we'll have the cow use the watering can when we press the space bar. In the `reset_cow()` function, replace the placeholder `pass` with:
     ```python
@@ -84,6 +84,7 @@ This is the largest and most complicated project of the semester. To help keep i
         if(keyboard.down and cow.y < WIDTH):
             cow.y += 5
     ```
+    Run your program and click on the screen with the mouse. You should be able to press the space bar to have the cow use the watering can.  
 
 ### *More to come*
 
