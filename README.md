@@ -129,14 +129,14 @@ This is the largest and most complicated project of the semester. To help keep i
 5. In the `wilt_flower()` function, replace the placeholder `pass` with:
     ```python
     def wilt_flower():
-    global flower_list, wilted_list, game_over
-    if (not game_over):
-        if(len(flower_list) > 0): 
-            rand_flower = randint(0,len(flower_list) - 1)
-            if(flower_list[rand_flower].image == "flower"):
-                flower_list[rand_flower].image = "flower-wilt"
-                wilted_list[rand_flower] = time.time()
-        clock.schedule(wilt_flower,3)
+        global flower_list, wilted_list, game_over
+        if (not game_over):
+            if(len(flower_list) > 0): 
+                rand_flower = randint(0,len(flower_list) - 1)
+                if(flower_list[rand_flower].image == "flower"):
+                    flower_list[rand_flower].image = "flower-wilt"
+                    wilted_list[rand_flower] = time.time()
+            clock.schedule(wilt_flower,3)
     ```
 6. In the `new_flower()` function, replace the placeholder `pass` with:
     ```python
