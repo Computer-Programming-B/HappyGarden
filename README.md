@@ -31,8 +31,20 @@ def draw():
     screen.blit("garden",(0,0))
     cow.draw()
 ```
-Run your code, you should see the cow with the watering can in the bottom left hand corner of the garden.
-5. Now we'll make the cow move
+Run your code, you should see the cow with the watering can in the bottom left hand corner of the garden.   
+5. Now we'll make the cow move. In the `update()` function, replace the placeholder `pass` with:
+```python
+def update():
+    if(keyboard.left and cow.x > 0):
+      cow.x -= 5
+    if(keyboard.right and cow.x < WIDTH):
+      cow.x += 5
+    if(keyboard.up and cow.y > 150):
+      cow.y -= 5
+    if(keyboard.down and cow.y < WIDTH):
+      cow.y += 5
+```
+Run your code and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
 
 Extensions
 ----------------------------------------------
