@@ -170,7 +170,7 @@ This is the largest and most complicated project of the semester. To help keep i
     wilt_flower()
     pgzrun.go()  
     ```
-    Run your program and you should see flowers appear and eventually wilt in the garden. 
+    Run your program and you should see flowers appear and randomly wilt in the garden. 
     
 ### D. Watering Flowers
     7. * More to come*
