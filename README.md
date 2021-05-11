@@ -48,7 +48,27 @@ Suggested steps to get started:
     ```
     Run your code and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
 
-6. Next, we'll have the cow use the watering can when we press the space bar. *More to come*
+6. Next, we'll have the cow use the watering can when we press the space bar. In the `reset_cow()` function, replace the placeholder `pass` with:
+    ```python
+    def reset_cow():
+        cow.image = "cow"
+    ```
+    Now add the following code to `update()`:
+    ```python
+    def update():
+      if(keyboard.space):
+        cow.image = "cow-water"
+        clock.schedule(reset_cow, 0.5)
+      if(keyboard.left and cow.x > 0):
+        cow.x -= 5
+      if(keyboard.right and cow.x < WIDTH):
+        cow.x += 5
+      if(keyboard.up and cow.y > 150):
+          cow.y -= 5
+      if(keyboard.down and cow.y < WIDTH):
+          cow.y += 5
+    ```
+7. *More to come*    
 
 Extensions
 ----------------------------------------------
