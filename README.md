@@ -147,7 +147,39 @@ This is the largest and most complicated project of the semester. To help keep i
     Run your program and you should see flowers appear and randomly wilt in the garden. 
     
 ### D. Watering Flowers
-8. *More to come*
+8. In the `check_flower_collision()` function, replace the placeholder `pass` with:
+    ```python
+    def check_flower_collision():
+        global cow, flower_list, wilted_list, game_over
+        index = 0
+        for flower in flower_list:
+            if(flower.colliderect(cow) and flower.image == "flower-wilt"):
+                flower.image = "flower"
+                wilted_list[index] = "happy"
+                break
+            index = index + 1
+    ```
+    At the bottom of the `if(keyboard.space):`, in `update()` call `check_flower_collision`. 
+    ```python
+    def update():
+  global game_over
+      if(not game_over):
+        if(keyboard.space):
+          cow.image = "cow-water"
+          clock.schedule(reset_cow, 0.5)
+          check_flower_collision()
+        if(keyboard.left and cow.x > 0):
+          cow.x -= 5
+        if(keyboard.right and cow.x < WIDTH):
+          cow.x += 5
+        if(keyboard.up and cow.y > 150):
+            cow.y -= 5
+        if(keyboard.down and cow.y < WIDTH):
+            cow.y += 5 
+    ```
+    Run your program and you should be able to revive the wilted flowers by watering them. 
+### E. Ending the game
+9. *More to come*
 
 Extensions
 ----------------------------------------------
