@@ -18,7 +18,7 @@ Then in the `draw()` function, replace the placeholder `pass` with:
 def draw():
     screen.blit("garden",(0,0))
 ```
-Run your code, you should see the garden.
+Run your code, you should see the garden.   
 4. Next, we'll add the cow
 
 Extensions
