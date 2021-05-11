@@ -86,7 +86,7 @@ This is the largest and most complicated project of the semester. To help keep i
     ```
     Run your program and click on the screen with the mouse. You should be able to press the space bar to have the cow use the watering can.  
 
-### *More to come*
+### B. *More to come*
 
 Extensions
 ----------------------------------------------
