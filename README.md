@@ -45,6 +45,7 @@ def update():
       cow.y += 5
 ```
 Run your code and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
+6. *More to come*
 
 Extensions
 ----------------------------------------------
