@@ -48,7 +48,7 @@ Suggested steps to get started:
     ```
     Run your code and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
 
-6. *More to come*
+6. Next, we'll have the cow use the watering can when we press the space bar. *More to come*
 
 Extensions
 ----------------------------------------------
