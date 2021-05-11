@@ -85,7 +85,7 @@ This is the largest and most complicated project of the semester. To help keep i
             cow.y += 5
     ```
 
-###*More to come*
+### *More to come*
 
 Extensions
 ----------------------------------------------
