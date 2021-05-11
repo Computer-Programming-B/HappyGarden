@@ -19,6 +19,7 @@ def draw():
     screen.blit("garden",(0,0))
 ```
 Run your code, you should see the garden.   
+
 4. Next, we'll add the cow. Under the comment `#actor variables` add the following code:
 ```python
 #actor variables
@@ -32,6 +33,7 @@ def draw():
     cow.draw()
 ```
 Run your code, you should see the cow with the watering can in the bottom left hand corner of the garden.   
+
 5. Now we'll make the cow move. In the `update()` function, replace the placeholder `pass` with:
 ```python
 def update():
@@ -45,6 +47,7 @@ def update():
       cow.y += 5
 ```
 Run your code and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
+
 6. *More to come*
 
 Extensions
