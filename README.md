@@ -5,9 +5,12 @@ When this game starts, a cow with a watering can appears in the garden, but ther
 
 Suggested steps to get started:
 ---------------------------------
-1. Start by forking [this replit](https://replit.com/@MrSimonLowell/HappyGardenBase), or download and unzip the replit if you are working on your own PC or Mac.
-2. This is the largest and most complicated project of the semester. To help keep it manageable, we'll start with an outline that labels each variable and function that we need to complete to finish the program. After each step, run your program to check for errors. *Keep your program running!* Don't go to the next step until you've fixed the errors on the current step.
-3. We'll start by drawing the garden and the cow. Under the comment `#screen dimension variables` add the following code:
+Start by forking [this replit](https://replit.com/@MrSimonLowell/HappyGardenBase), or download and unzip the replit if you are working on your own PC or Mac.
+
+This is the largest and most complicated project of the semester. To help keep it manageable, we'll start with an outline that labels each variable and function that we need to complete to finish the program. After each step, run your program to check for errors. *Keep your program running!* Don't go to the next step until you've fixed the errors on the current step.
+
+###Drawing the garden and the cow
+1. Under the comment `#screen dimension variables` add the following code:
     ```python
     #screen dimension variables
     WIDTH = 800
@@ -26,7 +29,7 @@ Suggested steps to get started:
     ```
     Run your code, you should see the garden.   
 
-4. Next, we'll add the cow. Under the comment `#actor variables` add the following code:
+2. Next, we'll add the cow. Under the comment `#actor variables` add the following code:
     ```python
     #actor variables
     cow = Actor("cow")
@@ -41,7 +44,7 @@ Suggested steps to get started:
     ```
     Run your code, you should see the cow with the watering can in the bottom left hand corner of the garden.   
 
-5. Now we'll make the cow move. In the `update()` function, replace the placeholder `pass` with:
+3. Now we'll make the cow move. In the `update()` function, replace the placeholder `pass` with:
     ```python
     def update():
       global game_over
@@ -57,7 +60,7 @@ Suggested steps to get started:
     ```
     Run your code and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
 
-6. Next, we'll have the cow use the watering can when we press the space bar. In the `reset_cow()` function, replace the placeholder `pass` with:
+4. Next, we'll have the cow use the watering can when we press the space bar. In the `reset_cow()` function, replace the placeholder `pass` with:
     ```python
     def reset_cow():
         global game_over
@@ -81,7 +84,8 @@ Suggested steps to get started:
         if(keyboard.down and cow.y < WIDTH):
             cow.y += 5
     ```
-7. *More to come*    
+
+###*More to come*
 
 Extensions
 ----------------------------------------------
