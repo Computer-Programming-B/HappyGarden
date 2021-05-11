@@ -13,10 +13,16 @@ Suggested steps to get started:
     WIDTH = 800
     HEIGHT = 600
     ```
+    Under the comment `#boolean variables` add the following code:
+    ```python
+    #boolean variables
+    game_over = False
+    ```
     Then in the `draw()` function, replace the placeholder `pass` with:
     ```python
     def draw():
-        screen.blit("garden",(0,0))
+        if (not game_over):
+            screen.blit("garden",(0,0))
     ```
     Run your code, you should see the garden.   
 
@@ -29,44 +35,51 @@ Suggested steps to get started:
     Then in the `draw()` function, draw the cow after the garden:
     ```python
     def draw():
-        screen.blit("garden",(0,0))
-        cow.draw()
+        if (not game_over):
+            screen.blit("garden",(0,0))
+            cow.draw()
     ```
     Run your code, you should see the cow with the watering can in the bottom left hand corner of the garden.   
 
 5. Now we'll make the cow move. In the `update()` function, replace the placeholder `pass` with:
     ```python
     def update():
+      global game_over
+      if(not game_over):
         if(keyboard.left and cow.x > 0):
           cow.x -= 5
         if(keyboard.right and cow.x < WIDTH):
           cow.x += 5
         if(keyboard.up and cow.y > 150):
-          cow.y -= 5
+            cow.y -= 5
         if(keyboard.down and cow.y < WIDTH):
-          cow.y += 5
+            cow.y += 5
     ```
     Run your code and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
 
 6. Next, we'll have the cow use the watering can when we press the space bar. In the `reset_cow()` function, replace the placeholder `pass` with:
     ```python
     def reset_cow():
-        cow.image = "cow"
+        global game_over
+        if (not game_over):
+          cow.image = "cow"
     ```
     Now add the following code to `update()`:
     ```python
     def update():
-      if(keyboard.space):
-        cow.image = "cow-water"
-        clock.schedule(reset_cow, 0.5)
-      if(keyboard.left and cow.x > 0):
-        cow.x -= 5
-      if(keyboard.right and cow.x < WIDTH):
-        cow.x += 5
-      if(keyboard.up and cow.y > 150):
-          cow.y -= 5
-      if(keyboard.down and cow.y < WIDTH):
-          cow.y += 5
+      global game_over
+      if(not game_over):
+        if(keyboard.space):
+          cow.image = "cow-water"
+          clock.schedule(reset_cow, 0.5)
+        if(keyboard.left and cow.x > 0):
+          cow.x -= 5
+        if(keyboard.right and cow.x < WIDTH):
+          cow.x += 5
+        if(keyboard.up and cow.y > 150):
+            cow.y -= 5
+        if(keyboard.down and cow.y < WIDTH):
+            cow.y += 5
     ```
 7. *More to come*    
 
