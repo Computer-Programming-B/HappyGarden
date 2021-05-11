@@ -86,7 +86,93 @@ This is the largest and most complicated project of the semester. To help keep i
     ```
     Run your program and click on the screen with the mouse. You should be able to press the space bar to have the cow use the watering can.  
 
-### B. *More to come*
+### B. Adding Flowers
+5. Under the comment `#list variables` add the following code:
+    ```python
+    #list variables
+    flower_list = []
+    wilted_list = []
+    ```
+6. In the `new_flower()` function, replace the placeholder `pass` with:
+    ```python
+    def new_flower():
+        global flower_list, wilted_list
+        flower_new = Actor("flower")
+        flower_new.pos = randint(50,WIDTH-50), randint(150,HEIGHT-100)
+        flower_list.append(flower_new)
+        wilted_list.append("happy")
+    ```
+    In the `add_flowers()` function, replace the placeholder `pass` with:
+    ```python
+    def add_flowers():
+        global game_over
+        if (not game_over):
+            new_flower()
+            clock.schedule(add_flowers,4)
+    ```
+    Then in the `draw()` function, draw the flowers after the garden and the cow:
+    ```python
+    def draw():
+      if (not game_over):
+        screen.blit("garden",(0,0))
+        cow.draw()
+        for flower in flower_list:
+          flower.draw()
+    ```
+    At the bottom of the program, add `add_flowers()` just above the call to start the program `pgzrun.go()`. 
+    ```python
+    add_flowers()
+    pgzrun.go()
+    ```
+    Run your program and you should see flowers appear in the garden. 
+### B. Wilting Flowers
+5. In the `wilt_flower()` function, replace the placeholder `pass` with:
+    ```python
+    def wilt_flower():
+    global flower_list, wilted_list, game_over
+    if (not game_over):
+        if(len(flower_list) > 0): 
+            rand_flower = randint(0,len(flower_list) - 1)
+            if(flower_list[rand_flower].image == "flower"):
+                flower_list[rand_flower].image = "flower-wilt"
+                wilted_list[rand_flower] = time.time()
+        clock.schedule(wilt_flower,3)
+    ```
+6. In the `new_flower()` function, replace the placeholder `pass` with:
+    ```python
+    def new_flower():
+        global flower_list, wilted_list
+        flower_new = Actor("flower")
+        flower_new.pos = randint(50,WIDTH-50), randint(150,HEIGHT-100)
+        flower_list.append(flower_new)
+        wilted_list.append("happy")
+    ```
+    In the `add_flowers()` function, replace the placeholder `pass` with:
+    ```python
+    def add_flowers():
+        global game_over
+        if (not game_over):
+            new_flower()
+            clock.schedule(add_flowers,4)
+    ```
+    Then in the `draw()` function, draw the flowers after the garden and the cow:
+    ```python
+    def draw():
+      if (not game_over):
+        screen.blit("garden",(0,0))
+        cow.draw()
+        for flower in flower_list:
+          flower.draw()
+    ```
+    At the bottom of the program, add `wilt_flower()` just above the call to start the program `pgzrun.go()`. 
+    ```python
+    add_flowers()
+    wilt_flower()
+    pgzrun.go()  
+    ```
+    Run your program and you should see flowers appear and eventually wilt in the garden. 
+    
+### C. Watering Flowers
 
 Extensions
 ----------------------------------------------
