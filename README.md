@@ -126,7 +126,7 @@ This is the largest and most complicated project of the semester. To help keep i
     ```
     Run your program and you should see flowers appear in the garden. 
 ### C. Wilting Flowers
-5. In the `wilt_flower()` function, replace the placeholder `pass` with:
+7. In the `wilt_flower()` function, replace the placeholder `pass` with:
     ```python
     def wilt_flower():
         global flower_list, wilted_list, game_over
@@ -147,7 +147,7 @@ This is the largest and most complicated project of the semester. To help keep i
     Run your program and you should see flowers appear and randomly wilt in the garden. 
     
 ### D. Watering Flowers
-    7. * More to come*
+8. * More to come*
 
 Extensions
 ----------------------------------------------
