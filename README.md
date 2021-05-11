@@ -26,7 +26,7 @@ Suggested steps to get started:
     cow = Actor("cow")
     cow.pos = 100, 500
     ```
-    Then in the `draw()` function, replace the placeholder `pass` with:
+    Then in the `draw()` function, draw the cow after the garden:
     ```python
     def draw():
         screen.blit("garden",(0,0))
