@@ -8,45 +8,45 @@ Suggested steps to get started:
 1. Start by forking [this replit](https://replit.com/@MrSimonLowell/HappyGardenBase), or download and unzip the replit if you are working on your own PC or Mac.
 2. This is the largest and most complicated project of the semester. To help keep it manageable, we'll start with an outline that labels each variable and function that we need to complete to finish the program. After each step, run your program to check for errors. *Keep your program running!* Don't go to the next step until you've fixed the errors on the current step.
 3. We'll start by drawing the garden and the cow. Under the comment `#screen dimension variables` add the following code:
-```python
-#screen dimension variables
-WIDTH = 800
-HEIGHT = 600
-```
-Then in the `draw()` function, replace the placeholder `pass` with:
-```python
-def draw():
-    screen.blit("garden",(0,0))
-```
-Run your code, you should see the garden.   
+    ```python
+    #screen dimension variables
+    WIDTH = 800
+    HEIGHT = 600
+    ```
+    Then in the `draw()` function, replace the placeholder `pass` with:
+    ```python
+    def draw():
+        screen.blit("garden",(0,0))
+    ```
+    Run your code, you should see the garden.   
 
 4. Next, we'll add the cow. Under the comment `#actor variables` add the following code:
-```python
-#actor variables
-cow = Actor("cow")
-cow.pos = 100, 500
-```
-Then in the `draw()` function, replace the placeholder `pass` with:
-```python
-def draw():
-    screen.blit("garden",(0,0))
-    cow.draw()
-```
-Run your code, you should see the cow with the watering can in the bottom left hand corner of the garden.   
+    ```python
+    #actor variables
+    cow = Actor("cow")
+    cow.pos = 100, 500
+    ```
+    Then in the `draw()` function, replace the placeholder `pass` with:
+    ```python
+    def draw():
+        screen.blit("garden",(0,0))
+        cow.draw()
+    ```
+    Run your code, you should see the cow with the watering can in the bottom left hand corner of the garden.   
 
 5. Now we'll make the cow move. In the `update()` function, replace the placeholder `pass` with:
-```python
-def update():
-    if(keyboard.left and cow.x > 0):
-      cow.x -= 5
-    if(keyboard.right and cow.x < WIDTH):
-      cow.x += 5
-    if(keyboard.up and cow.y > 150):
-      cow.y -= 5
-    if(keyboard.down and cow.y < WIDTH):
-      cow.y += 5
-```
-Run your code and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
+    ```python
+    def update():
+        if(keyboard.left and cow.x > 0):
+          cow.x -= 5
+        if(keyboard.right and cow.x < WIDTH):
+          cow.x += 5
+        if(keyboard.up and cow.y > 150):
+          cow.y -= 5
+        if(keyboard.down and cow.y < WIDTH):
+          cow.y += 5
+    ```
+    Run your code and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
 
 6. *More to come*
 
