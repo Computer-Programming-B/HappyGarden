@@ -147,7 +147,7 @@ This is the largest and most complicated project of the semester. To help keep i
     Run your program and you should see flowers appear and randomly wilt in the garden. 
     
 ### D. Watering Flowers
-8. * More to come*
+8. *More to come*
 
 Extensions
 ----------------------------------------------
