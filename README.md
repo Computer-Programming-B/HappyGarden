@@ -7,7 +7,19 @@ Suggested steps to get started:
 ---------------------------------
 1. Start by forking [this replit](https://replit.com/@MrSimonLowell/HappyGardenBase), or download and unzip the replit if you are working on your own PC or Mac.
 2. This is the largest and most complicated project of the semester. To help keep it manageable, we'll start with an outline that labels each variable and function that we need to complete to finish the program. After each step, run your program to check for errors. *Keep your program running!* Don't go to the next step until you've fixed the errors on the current step.
-3. *More to come*
+3. We'll start by drawing the garden. Under the comment `#screen dimension variables` add the following code:
+```python
+#screen dimension variables
+WIDTH = 800
+HEIGHT = 600
+```
+Then in the `draw()` function, replace the placeholder `pass` with:
+```python
+def draw():
+    screen.blit("garden",(0,0))
+```
+Run your code, you should see the garden.
+4. Next, we'll add the cow
 
 Extensions
 ----------------------------------------------
