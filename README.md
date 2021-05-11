@@ -125,7 +125,7 @@ This is the largest and most complicated project of the semester. To help keep i
     pgzrun.go()
     ```
     Run your program and you should see flowers appear in the garden. 
-### B. Wilting Flowers
+### C. Wilting Flowers
 5. In the `wilt_flower()` function, replace the placeholder `pass` with:
     ```python
     def wilt_flower():
@@ -172,7 +172,8 @@ This is the largest and most complicated project of the semester. To help keep i
     ```
     Run your program and you should see flowers appear and eventually wilt in the garden. 
     
-### C. Watering Flowers
+### D. Watering Flowers
+    7. * More to come*
 
 Extensions
 ----------------------------------------------
