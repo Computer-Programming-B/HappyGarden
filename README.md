@@ -98,7 +98,7 @@ This is the largest and most complicated project of the semester. To help keep i
     def new_flower():
         global flower_list, wilted_list
         flower_new = Actor("flower")
-        flower_new.pos = randint(50,WIDTH-50), randint(150,HEIGHT-100)
+        flower_new.pos = (randint(50,WIDTH-50), randint(150,HEIGHT-100))
         flower_list.append(flower_new)
         wilted_list.append("happy")
     ```
