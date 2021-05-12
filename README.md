@@ -355,10 +355,11 @@ This is the largest and most complicated project of the semester. To help keep i
                     fangflower_vy_list[index] = -fangflower_vy
                 index = index + 1
     ```
-    Add an `if` statement to mutate flowers into fangflowers and a call to `update_fangflowers()` at the end of `update()`:
+    In the `update()` function, add `fangflower_collision` to the list of `global` variables and assign it the result of calling `check_fanflower_collision`, an `if` statement to mutate flowers into fangflowers and a call to `update_fangflowers()` :
     ```python
     def update():
-      global game_over, time_elapsed
+      global score, game_over, fangflower_collision
+      fangflower_collision = check_fangflower_collision()
       check_wilt_times()
       if(not game_over):
         if(keyboard.space):
@@ -373,25 +374,9 @@ This is the largest and most complicated project of the semester. To help keep i
             cow.y -= 5
         if(keyboard.down and cow.y < WIDTH):
             cow.y += 5
-        def update():
-  global game_over, time_elapsed
-  check_wilt_times()
-  if(not game_over):
-    if(keyboard.space):
-      cow.image = "cow-water"
-      clock.schedule(reset_cow, 0.5)
-      check_flower_collision()
-    if(keyboard.left and cow.x > 0):
-      cow.x -= 5
-    if(keyboard.right and cow.x < WIDTH):
-      cow.x += 5
-    if(keyboard.up and cow.y > 150):
-        cow.y -= 5
-    if(keyboard.down and cow.y < WIDTH):
-        cow.y += 5
-    if(time_elapsed > 15 and len(fangflower_list)==0):
-        mutate()
-    update_fangflowers()
+        if(time_elapsed > 15 and len(fangflower_list)==0):
+            mutate()
+        update_fangflowers()
     ```
     You should now have a working program!
 
