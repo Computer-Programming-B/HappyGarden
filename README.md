@@ -9,7 +9,7 @@ Start by forking [this replit](https://replit.com/@MrSimonLowell/HappyGardenBase
 
 This is the largest and most complicated project of the semester. To help keep it manageable, we'll start with an outline that labels each variable and function that we need to complete to finish the program. After each step, run your program to check for errors. *Keep your program running!* Don't go to the next step until you've fixed the errors on the current step.
 
-### A. Setting up the game and drawing the garden and the cow
+### A. Setting up the game and drawing the garden and cow
 1. Under the comment `#screen dimension variables` add the following code:
     ```python
     #screen dimension variables
