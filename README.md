@@ -355,7 +355,7 @@ This is the largest and most complicated project of the semester. To help keep i
                     fangflower_vy_list[index] = -fangflower_vy
                 index = index + 1
     ```
-    In the `update()` function, add `fangflower_collision` to the list of `global` variables and assign it the result of calling `check_fanflower_collision`, an `if` statement to mutate flowers into fangflowers and a call to `update_fangflowers()` :
+    In the `update()` function, add `fangflower_collision` to the list of `global` variables and assign it the result of calling `check_fangflower_collision`, an `if` statement to mutate flowers into fangflowers and a call to `update_fangflowers()` :
     ```python
     def update():
       global score, game_over, fangflower_collision
