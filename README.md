@@ -177,7 +177,7 @@ This is the largest and most complicated project of the semester. To help keep i
                 if(keyboard.down and cow.y < WIDTH):
                     cow.y += 5 
     ```
-    Run your program and you should be able to revive the wilted flowers by watering them. 
+    Run your program and the cow should be able to revive the wilted flowers by watering them. 
     
 ### E. Ending the game
 9. Under the comments `#boolean variables` and `#time variables` add the following code:
