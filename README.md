@@ -249,7 +249,133 @@ This is the largest and most complicated project of the semester. To help keep i
     Run your program. If any flower stays wilted for 10 seconds, you should see a game over message.
 ### F. Adding fangflowers
 
-13. *More to Come!*
+13. Under the comments `#boolean variables` add a `fangflower_collision` boolean:
+    ```python
+    #boolean variables
+    game_over = False
+    finalized = False
+    garden_happy = True
+    fangflower_collision = False
+    ```
+
+    Under the comments `#list variables` add three variables:
+    ```python
+    #list variables
+    flower_list = []
+    wilted_list = []
+    fangflower_list = []
+    fangflower_vx_list = []
+    fangflower_vy_list = []
+    ```
+
+    Add a loop in `draw()` to draw the fangflowers and an `else` to end the game if there is a fangflower attack:
+    ```python
+    def draw():
+        global game_over, time_elapsed, finalized
+        if (not game_over):
+            screen.clear()
+            screen.blit("garden",(0,0))
+            cow.draw()
+            for flower in flower_list:
+                flower.draw()
+            for fangflower in fangflower_list:
+                fangflower.draw()
+            time_elapsed = int(time.time() - start_time)
+            screen.draw.text("Garden happy for: " + str(time_elapsed)
+                             + " seconds",topleft=(10,10),color="black")
+        else:
+            if (not finalized):
+                cow.draw()
+                screen.draw.text("Garden happy for: " + str(time_elapsed)
+                             + " seconds",topleft=(10,10),color="black")
+                if(not garden_happy):
+                    screen.draw.text("GARDEN UNHAPPY-GAME OVER!",topleft=(10,50),color="black")
+                    finalized = True
+                else:
+                    screen.draw.text("FANGFLOWER ATTACK-GAME OVER!",topleft=(10,50),color="black")
+                    finalized = True
+    ```
+    In the `check_fangflower_collision()` function, replace the placeholder `pass` with:
+     ```python
+    def check_fangflower_collision():
+        global cow, fangflower_list, fangflower_collision, game_over
+        for fangflower in fangflower_list:
+            if(fangflower.colliderect(cow)):
+               cow.image = "zap"
+               game_over = True
+               break
+    ```
+    In the `velocity()` function, replace the placeholder `pass` with:
+    ```python
+    def velocity():
+        random_dir = randint(0,1)
+        random_velocity = randint(2,3)
+        if(random_dir == 0):
+            return -random_velocity
+        else:
+            return random_velocity
+    ```
+    In the `mutate()` function, replace the placeholder `pass` with:
+    ```python
+    def mutate():
+        global flower_list, fangflower_list, fangflower_vy_list
+        global fangflower_vx_list, game_over
+        if (not game_over and len(flower_list) > 0):
+            rand_flower = randint(0, len(flower_list) - 1)
+            fangflower_pos_x = flower_list[rand_flower].x
+            fangflower_pos_y = flower_list[rand_flower].y
+            del flower_list[rand_flower]
+            fangflower = Actor("fangflower")
+            fangflower.pos = fangflower_pos_x, fangflower_pos_y
+            fangflower_vx = velocity()
+            fangflower_vy = velocity()
+            fangflower = fangflower_list.append(fangflower)
+            fangflower_vx_list.append(fangflower_vx)
+            fangflower_vy_list.append(fangflower_vy)
+            clock.schedule(mutate, 20)
+    ```
+    In the `update_fangflowers()` function, replace the placeholder `pass` with:
+    ```python
+    def update_fangflowers():
+        global fangflower_list, game_over
+        if(not game_over):
+            index = 0
+            for fangflower in fangflower_list:
+                fangflower_vx = fangflower_vx_list[index]
+                fangflower_vy = fangflower_vy_list[index]
+                fangflower.x = fangflower.x + fangflower_vx
+                fangflower.y = fangflower.y + fangflower_vy
+                if(fangflower.left < 0):
+                    fangflower_vx_list[index] = -fangflower_vx
+                if(fangflower.right > WIDTH):
+                    fangflower_vx_list[index] = -fangflower_vx
+                if(fangflower.top < 150):
+                    fangflower_vy_list[index] = -fangflower_vy
+                if(fangflower.bottom > HEIGHT):
+                    fangflower_vy_list[index] = -fangflower_vy
+                index = index + 1
+    ```
+    Add a call to `update_fangflowers()` at the end of `update()`:
+    ```python
+    def update():
+      global game_over, time_elapsed
+      check_wilt_times()
+      if(not game_over):
+        if(keyboard.space):
+          cow.image = "cow-water"
+          clock.schedule(reset_cow, 0.5)
+          check_flower_collision()
+        if(keyboard.left and cow.x > 0):
+          cow.x -= 5
+        if(keyboard.right and cow.x < WIDTH):
+          cow.x += 5
+        if(keyboard.up and cow.y > 150):
+            cow.y -= 5
+        if(keyboard.down and cow.y < WIDTH):
+            cow.y += 5
+        update_fangflowers()
+    ```
+    You should now have a working program!
 
 Extensions
 ----------------------------------------------
