@@ -180,7 +180,76 @@ This is the largest and most complicated project of the semester. To help keep i
     Run your program and you should be able to revive the wilted flowers by watering them. 
     
 ### E. Ending the game
-9. *More to come*
+9. Under the comments `#boolean variables` and `#time variables` add the following code:
+    ```python
+    #boolean variables
+    game_over = False
+    finalized = False
+    garden_happy = True
+
+    #time variables
+    time_elapsed = 0
+    start_time = time.time()
+    ```
+10. In the `check_wilt_times()` function, replace the placeholder `pass` with:
+    ```python
+    def check_wilt_times():
+        global wilted_list, game_over, garden_happy
+        if(len(wilted_list)>0):
+            for wilted_since in wilted_list:
+                if(not wilted_since == "happy"):
+                    time_wilted = int(time.time() - wilted_since)
+                    if(time_wilted > 10.0):
+                        garden_happy = False
+                        game_over = True
+                        break
+    ```
+11. in `update()` call `check_wilt_times()` and add `time_elasped` to the list of `global` variables:
+    ```python
+    def update():
+      global game_over, time_elapsed
+      check_wilt_times()
+      if(not game_over):
+        if(keyboard.space):
+          cow.image = "cow-water"
+          clock.schedule(reset_cow, 0.5)
+          check_flower_collision()
+        if(keyboard.left and cow.x > 0):
+          cow.x -= 5
+        if(keyboard.right and cow.x < WIDTH):
+          cow.x += 5
+        if(keyboard.up and cow.y > 150):
+            cow.y -= 5
+        if(keyboard.down and cow.y < WIDTH):
+            cow.y += 5
+    ```
+    
+12. Add an `else` to the `if(not game_over)` in draw:
+    ```python
+    def draw():
+        global game_over, time_elapsed, finalized
+        if (not game_over):
+            screen.clear()
+            screen.blit("garden",(0,0))
+            cow.draw()
+            for flower in flower_list:
+                flower.draw()
+            time_elapsed = int(time.time() - start_time)
+            screen.draw.text("Garden happy for: " + str(time_elapsed)
+                             + " seconds",topleft=(10,10),color="black")
+        else:
+            if (not finalized):
+                cow.draw()
+                screen.draw.text("Garden happy for: " + str(time_elapsed)
+                             + " seconds",topleft=(10,10),color="black")
+                if(not garden_happy):
+                    screen.draw.text("GARDEN UNHAPPY-GAME OVER!",topleft=(10,50),color="black")
+                    finalized = True
+    ```
+    Run your program. If any flower stays wilted for 10 seconds, you should see a game over message.
+### F. Adding fangflowers
+
+13. *More to Come!*
 
 Extensions
 ----------------------------------------------
