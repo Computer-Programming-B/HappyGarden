@@ -26,6 +26,7 @@ This is the largest and most complicated project of the semester. To help keep i
     Then in the `draw()` function, replace the placeholder `pass` with:
     ```python
     def draw():
+        global game_over
         if (not game_over):
             screen.blit("garden",(0,0))
     ```
@@ -35,11 +36,12 @@ This is the largest and most complicated project of the semester. To help keep i
     ```python
     #actor variables
     cow = Actor("cow")
-    cow.pos = 100, 500
+    cow.pos = (100, 500)
     ```
     Then in the `draw()` function, draw the cow after the garden:
     ```python
     def draw():
+        global game_over
         if (not game_over):
             screen.blit("garden",(0,0))
             cow.draw()
@@ -57,7 +59,7 @@ This is the largest and most complicated project of the semester. To help keep i
           cow.x += 5
         if(keyboard.up and cow.y > 150):
             cow.y -= 5
-        if(keyboard.down and cow.y < WIDTH):
+        if(keyboard.down and cow.y < HEIGHT):
             cow.y += 5
     ```
     Run your program and click on the screen with the mouse. You should be able to move the cow around the garden with the arrow keys.   
