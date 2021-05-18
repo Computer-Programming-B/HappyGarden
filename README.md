@@ -5,6 +5,8 @@ When this game starts, a cow with a watering can appears in the garden, but ther
 
 You may find slides 348 -  of the [slide presentation](https://docs.google.com/presentation/d/1rICcmNbnGYsB-cV_6EatPyzcOS2sId80Jh2kayUzm4Q/edit?usp=sharing) helpful in completing this assignment. There are also video instructions:   
 [Part A](http://youtu.be/SJiOUWe7DvI?hd=1)   
+[Part B](http://youtu.be/7TxnWD-6ZzQ?hd=1)   
+[Part C](http://youtu.be/j8oVNhG2MTM?hd=1)   
 
 Suggested steps to get started:
 ---------------------------------
