@@ -10,6 +10,7 @@ You may find slides 348 -  of the [slide presentation](https://docs.google.com/p
 [Part B](http://youtu.be/7TxnWD-6ZzQ?hd=1)   
 [Part C](http://youtu.be/j8oVNhG2MTM?hd=1)   
 [Part D](http://youtu.be/OvaiQNLCroI?hd=1)   
+[Part E](http://youtu.be/E155soflVso?hd=1)   
 
 Suggested steps to get started:
 ---------------------------------
