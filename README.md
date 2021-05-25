@@ -1,4 +1,4 @@
-![](HappyGarden.gif)   
+![](HappyGardenV2.gif)   
 Happy Garden
 ===========
 <p align="center"><i>This project was adapted from the book <b><a href="https://www.dk.com/us/book/9781465473615-coding-games-in-python/">Coding Games in Python</a></b></i></p>
