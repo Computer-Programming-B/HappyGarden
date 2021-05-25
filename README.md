@@ -366,7 +366,7 @@ This is the largest and most complicated project of the semester. To help keep i
     In the `update()` function, add `fangflower_collision` to the list of `global` variables and assign it the result of calling `check_fangflower_collision`, an `if` statement to mutate flowers into fangflowers and a call to `update_fangflowers()` :
     ```python
     def update():
-      global game_over
+      global game_over, fangflower_collision
       fangflower_collision = check_fangflower_collision()
       check_wilt_times()
       if(not game_over):
