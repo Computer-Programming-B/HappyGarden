@@ -5,7 +5,7 @@ Happy Garden
 When this game starts, a cow with a watering can appears in the garden, but there is only one flower. Every few seconds another flower appears or an existing flower begins to wilt. Use the arrow keys to move the cow to the wilted flowers and press the space bar to water them. If any flower remains wilted for more than ten seconds, the game ends. But if the garden is happy for more than 15 seconds, one of the flowers mutates into a fangflower and tries to zap the cow.     
    
 
-You may find slides 348 -  of the [slide presentation](https://docs.google.com/presentation/d/1rICcmNbnGYsB-cV_6EatPyzcOS2sId80Jh2kayUzm4Q/edit?usp=sharing) helpful in completing this assignment. There are also video instructions:   
+You may find slides 348 - 390 of the [slide presentation](https://docs.google.com/presentation/d/1rICcmNbnGYsB-cV_6EatPyzcOS2sId80Jh2kayUzm4Q/edit?usp=sharing) helpful in completing this assignment. There are also video instructions:   
 [Part A](http://youtu.be/SJiOUWe7DvI?hd=1)   
 [Part B](http://youtu.be/7TxnWD-6ZzQ?hd=1)   
 [Part C](http://youtu.be/j8oVNhG2MTM?hd=1)   
@@ -369,7 +369,7 @@ This is the largest and most complicated project of the semester. To help keep i
     In the `update()` function, add `fangflower_collision` to the list of `global` variables and assign it the result of calling `check_fangflower_collision`, an `if` statement to mutate flowers into fangflowers and a call to `update_fangflowers()` :
     ```python
     def update():
-      global score, game_over, fangflower_collision
+      global game_over
       fangflower_collision = check_fangflower_collision()
       check_wilt_times()
       if(not game_over):
