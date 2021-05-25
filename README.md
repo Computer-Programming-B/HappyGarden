@@ -260,16 +260,7 @@ This is the largest and most complicated project of the semester. To help keep i
     Run your program. If any flower stays wilted for 10 seconds, you should see a game over message.
 ### F. Adding fangflowers
 
-13. Under the comments `#boolean variables` add a `fangflower_collision` boolean:
-    ```python
-    #boolean variables
-    game_over = False
-    finalized = False
-    garden_happy = True
-    fangflower_collision = False
-    ```
-
-    Under the comments `#list variables` add three variables:
+13. Under the comments `#list variables` add three variables:
     ```python
     #list variables
     flower_list = []
@@ -366,8 +357,8 @@ This is the largest and most complicated project of the semester. To help keep i
     In the `update()` function, add `fangflower_collision` to the list of `global` variables and assign it the result of calling `check_fangflower_collision`, an `if` statement to mutate flowers into fangflowers and a call to `update_fangflowers()` :
     ```python
     def update():
-      global game_over, fangflower_collision
-      fangflower_collision = check_fangflower_collision()
+      global game_over
+      check_fangflower_collision()
       check_wilt_times()
       if(not game_over):
         if(keyboard.space):
