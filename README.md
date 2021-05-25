@@ -329,8 +329,6 @@ This is the largest and most complicated project of the semester. To help keep i
     In the `mutate()` function, replace the placeholder `pass` with:
     ```python
     def mutate():
-        global flower_list, fangflower_list, fangflower_vy_list
-        global fangflower_vx_list, game_over
         if (not game_over and len(flower_list) > 0):
             rand_flower = randint(0, len(flower_list) - 1)
             fangflower_pos_x = flower_list[rand_flower].x
