@@ -260,7 +260,7 @@ This is the largest and most complicated project of the semester. To help keep i
     Run your program. If any flower stays wilted for 10 seconds, you should see a game over message.
 ### F. Adding fangflowers
 
-13. Under the comments `#list variables` add three variables:
+13. Under the comments `#list variables` add the three fangflower list variables:
     ```python
     #list variables
     flower_list = []
