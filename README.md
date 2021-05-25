@@ -309,7 +309,7 @@ This is the largest and most complicated project of the semester. To help keep i
     In the `check_fangflower_collision()` function, replace the placeholder `pass` with:
      ```python
     def check_fangflower_collision():
-        global cow, fangflower_list, fangflower_collision, game_over
+        global game_over
         for fangflower in fangflower_list:
             if(fangflower.colliderect(cow)):
                cow.image = "zap"
