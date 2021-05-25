@@ -348,7 +348,6 @@ This is the largest and most complicated project of the semester. To help keep i
     In the `update_fangflowers()` function, replace the placeholder `pass` with:
     ```python
     def update_fangflowers():
-        global fangflower_list, game_over
         if(not game_over):
             index = 0
             for fangflower in fangflower_list:
